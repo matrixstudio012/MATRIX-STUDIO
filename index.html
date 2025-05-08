@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matrix Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="https://media.discordapp.net/attachments/1220790293323055144/1370109562979352718/logogrande.png?ex=681e4d77&is=681cfbf7&hm=cb1df4f729a8e3e308f57241a1618f6f4f1fbef9b9c675e678dad4e7d60939f4&=&format=webp&quality=lossless" alt="Logo Matrix" class="logo" />
+  </header>
+
+  <section class="galeria">
+    <div class="foto" onclick="ampliar('foto1.jpg', 'Texto 1')">
+      <img src="https://media.discordapp.net/attachments/1220790293323055144/1370112141008568330/IMG_20250502_123737106_HDR.jpg?ex=681e4fdd&is=681cfe5d&hm=07f8e481d33bb1f4b637c3db4d34279a8c4956cf0ac67a64a486a1027d33f4b2&=&format=webp&width=591&height=788" alt="Foto 1" />
+      <p>Texto 1</p>
+    </div>
+    <div class="foto" onclick="ampliar('foto2.jpg', 'Texto 2')">
+      <img src="img/foto2.jpg" alt="Foto 2" />
+      <p>Texto 2</p>
+    </div>
+  </section>
+
+  <section class="quem-somos">
+    <h2>Quem somos</h2>
+    <p>Clique aqui para ampliar nosso texto institucional.</p>
+  </section>
+
+  <section class="links">
+    <div onclick="irPara('servicos.html')">Serviços</div>
+    <div onclick="irPara('como-funciona.html')">Como funciona</div>
+    <div onclick="irPara('feedback.html')">Feedback</div>
+  </section>
+
+  <footer>
+    <a href="https://wa.me/SEUNUMERO" target="_blank"><img src="img/redes/whatsapp.png" alt="WhatsApp" /></a>
+    <a href="https://instagram.com/SEUPERFIL" target="_blank"><img src="img/redes/instagram.png" alt="Instagram" /></a>
+  </footer>
+
+  <!-- Modal de Ampliação -->
+  <div id="modal" class="modal" onclick="fecharModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span onclick="fecharModal()">⬅ Voltar</span>
+      <img id="modal-img" />
+      <p id="modal-texto"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
